@@ -2,15 +2,12 @@
 Splash - Tests
 """
 
-from mock import patch
-
-from django.conf import settings
 from django.contrib.auth.models import AnonymousUser, User
 from django.test import TestCase
 from django.test.client import RequestFactory
-from django.test.utils import override_settings
 
 from splash.middleware import SplashMiddleware
+from splash.models import SplashConfig
 
 import logging
 log = logging.getLogger(__name__)
@@ -26,6 +23,7 @@ class SplashMiddlewareTestCase(TestCase):
         """
         self.splash_middleware = SplashMiddleware()
         self.request_factory = RequestFactory()
+        SplashConfig().save()
 
     def build_request(self, username=None, cookies=None):
         """
@@ -60,86 +58,110 @@ class SplashMiddlewareTestCase(TestCase):
         response = self.splash_middleware.process_request(request)
         self.assertEquals(response, None)
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
     def test_no_cookie(self):
         """
         No cookie present should redirect
         """
+        SplashConfig(
+            enabled=True,
+        ).save()
+
         request = self.build_request()
         response = self.splash_middleware.process_request(request)
         self.assert_redirect(response, 'http://edx.org')
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
-    @override_settings(SPLASH_SCREEN_COOKIE_ALLOWED_VALUES=['ok1', 'ok2'])
-    @override_settings(SPLASH_SCREEN_REDIRECT_URL='http://example.com')
     def test_wrong_cookie(self):
         """
         A cookie value different from the allowed ones should redirect
         """
+        SplashConfig(
+            enabled=True,
+            cookie_allowed_values='ok1,ok2',
+            redirect_url='http://example.com'
+        ).save()
+
         request = self.build_request(cookies={'edx_splash_screen': 'not ok'})
         response = self.splash_middleware.process_request(request)
         self.assert_redirect(response, 'http://example.com')
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
-    @override_settings(SPLASH_SCREEN_COOKIE_ALLOWED_VALUES=['ok1', 'ok2'])
-    @override_settings(SPLASH_SCREEN_REDIRECT_URL='http://example.com')
     def test_right_cookie(self):
         """
         A cookie value corresponding to one of the allowed ones should not redirect
         """
+        SplashConfig(
+            enabled=True,
+            cookie_allowed_values='ok1,ok2',
+            redirect_url='http://example.com'
+        ).save()
+
         request = self.build_request(cookies={'edx_splash_screen': 'ok2'})
         response = self.splash_middleware.process_request(request)
         self.assertEquals(response, None)
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
-    @override_settings(SPLASH_SCREEN_COOKIE_NAME='othername')
     def test_wrong_cookie_different_cookie_name(self):
         """
         Different cookie name
         A cookie value different from the allowed ones should redirect
         """
+        SplashConfig(
+            enabled=True,
+            cookie_name='othername',
+        ).save()
+
         request = self.build_request(cookies={'othername': 'not ok'})
         response = self.splash_middleware.process_request(request)
         self.assert_redirect(response, 'http://edx.org')
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
-    @override_settings(SPLASH_SCREEN_COOKIE_NAME='othername')
     def test_right_cookie_different_cookie_name(self):
         """
         Different cookie name
         A cookie value corresponding to one of the allowed ones should not redirect
         """
+        SplashConfig(
+            enabled=True,
+            cookie_name='othername',
+        ).save()
+
         request = self.build_request(cookies={'othername': 'seen'})
         response = self.splash_middleware.process_request(request)
         self.assertEquals(response, None)
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
-    @override_settings(SPLASH_SCREEN_UNAFFECTED_USERS=['user1'])
     def test_not_unaffected_user(self):
         """
         Setting unaffected users should still redirect other users
         """
+        SplashConfig(
+            enabled=True,
+            unaffected_usernames='user1',
+        ).save()
+
         request = self.build_request(username='user2')
         response = self.splash_middleware.process_request(request)
         self.assert_redirect(response, 'http://edx.org')
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
-    @override_settings(SPLASH_SCREEN_UNAFFECTED_USERS=['user1'])
     def test_unaffected_user(self):
         """
         Unaffected users should never be redirected
         """
+        SplashConfig(
+            enabled=True,
+            unaffected_usernames='user1',
+        ).save()
+
         request = self.build_request(username='user1')
         response = self.splash_middleware.process_request(request)
         self.assertEquals(response, None)
 
-    @patch.dict(settings.FEATURES, {'ENABLE_SPLASH_SCREEN': True})
-    @override_settings(SPLASH_SCREEN_REDIRECT_URL='http://testserver/somewhere')
     def test_redirect_to_current_url(self):
         """
         When the URL of the redirection is the same as the current URL,
         we shouldn't be redirected
         """
+        SplashConfig(
+            enabled=True,
+            redirect_url='http://testserver/somewhere'
+        ).save()
+
         request = self.build_request()
         response = self.splash_middleware.process_request(request)
         self.assertEquals(response, None)

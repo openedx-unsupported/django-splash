@@ -6,6 +6,8 @@ if they don't have the proper cookie set. This can be used to display a small
 marketing landing page, protect an alpha website from the public eye, make an
 announcement, etc.
 
+Meant to be used with https://github.com/edx/edx-platform/
+
 ### Installation
 
 Add the following configuration variables:
