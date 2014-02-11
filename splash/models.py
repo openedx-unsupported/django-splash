@@ -47,5 +47,3 @@ class SplashConfig(ConfigurationModel):
             return []
 
         return [name.strip() for name in self.unaffected_usernames.split(',')]  # pylint: disable=no-member
-    
-    #DarkLangConfig.current().released_languages_list
