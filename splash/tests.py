@@ -3,6 +3,7 @@ Splash - Tests
 """
 
 from django.contrib.auth.models import AnonymousUser, User
+from django.core.exceptions import ValidationError
 from django.test import TestCase
 from django.test.client import RequestFactory
 
@@ -22,7 +23,7 @@ class SplashMiddlewareTestCase(TestCase):
         Init
         """
         self.splash_middleware = SplashMiddleware()
-        self.request_factory = RequestFactory()
+        self.request_factory = RequestFactory(SERVER_NAME='example.org')
         SplashConfig().save()
 
     def build_request(self, username=None, cookies=None):
@@ -159,9 +160,18 @@ class SplashMiddlewareTestCase(TestCase):
         """
         SplashConfig(
             enabled=True,
-            redirect_url='http://testserver/somewhere'
+            redirect_url='http://example.org/somewhere'
         ).save()
 
         request = self.build_request()
         response = self.splash_middleware.process_request(request)
         self.assertEquals(response, None)
+
+    def test_set_non_absolute_url(self):
+        """
+        Make sure the URL is absolute, to make sure we can compare it
+        to the current URL
+        Should not validate with a non-absolute URL
+        """
+        config = SplashConfig(redirect_url='/somewhere')
+        self.assertRaises(ValidationError, config.save)

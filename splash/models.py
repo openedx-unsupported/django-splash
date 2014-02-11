@@ -47,3 +47,8 @@ class SplashConfig(ConfigurationModel):
             return []
 
         return [name.strip() for name in self.unaffected_usernames.split(',')]  # pylint: disable=no-member
+
+    def save(self, *args, **kwargs):
+        """Call `full_clean` before saving to ensure proper validation of configuration values"""
+        self.full_clean()
+        super(SplashConfig, self).save(*args, **kwargs)
