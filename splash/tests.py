@@ -26,11 +26,11 @@ class SplashMiddlewareTestCase(TestCase):
         self.request_factory = RequestFactory(SERVER_NAME='example.org')
         SplashConfig().save()
 
-    def build_request(self, username=None, cookies=None):
+    def build_request(self, username=None, cookies=None, url_path='/somewhere'):
         """
         Builds a new request, associated with a user (anonymous by default)
         """
-        request = self.request_factory.get('/somewhere')
+        request = self.request_factory.get(url_path)
 
         if username is None:
             request.user = AnonymousUser()
@@ -175,3 +175,28 @@ class SplashMiddlewareTestCase(TestCase):
         """
         config = SplashConfig(redirect_url='/somewhere')
         self.assertRaises(ValidationError, config.save)
+
+    def test_unaffected_path_default(self):
+        """
+        Unaffected paths should never be redirected - default
+        """
+        SplashConfig(
+            enabled=True,
+        ).save()
+
+        request = self.build_request(url_path='/heartbeat')
+        response = self.splash_middleware.process_request(request)
+        self.assertEquals(response, None)
+
+    def test_unaffected_path(self):
+        """
+        Unaffected paths should never be redirected - custom value
+        """
+        SplashConfig(
+            enabled=True,
+            unaffected_url_paths='/test1,/my/url/',
+        ).save()
+
+        request = self.build_request(url_path='/my/url/')
+        response = self.splash_middleware.process_request(request)
+        self.assertEquals(response, None)

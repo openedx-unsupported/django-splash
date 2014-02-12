@@ -27,6 +27,10 @@ class SplashMiddleware(object):
         if not config.enabled:
             return
 
+        # Some URLs should never be redirected
+        if request.path_info in config.unaffected_url_paths_list:
+            return
+
         # Some users should never be redirected
         if request.user.username in config.unaffected_usernames_list:
             return
