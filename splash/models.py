@@ -24,7 +24,7 @@ class SplashConfig(ConfigurationModel):
         help_text="Comma-separated list of users which should never be redirected (usernames)"
     )
     unaffected_url_paths = models.TextField(
-        default='/heartbeat',
+        default='',
         blank=True,
         help_text="Comma-separated list of URL paths (not including the hostname) which should not be redirected"
     )

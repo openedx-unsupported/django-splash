@@ -176,18 +176,6 @@ class SplashMiddlewareTestCase(TestCase):
         config = SplashConfig(redirect_url='/somewhere')
         self.assertRaises(ValidationError, config.save)
 
-    def test_unaffected_path_default(self):
-        """
-        Unaffected paths should never be redirected - default
-        """
-        SplashConfig(
-            enabled=True,
-        ).save()
-
-        request = self.build_request(url_path='/heartbeat')
-        response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
-
     def test_unaffected_path(self):
         """
         Unaffected paths should never be redirected - custom value
