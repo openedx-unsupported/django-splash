@@ -188,3 +188,43 @@ class SplashMiddlewareTestCase(TestCase):
         request = self.build_request(url_path='/my/url/')
         response = self.splash_middleware.process_request(request)
         self.assertEquals(response, None)
+
+    def test_unaffected_wildcard_path(self):
+        """
+        Unaffected wildcard paths should never be redirected - custom value
+        """
+        SplashConfig(
+            enabled=True,
+            unaffected_url_paths='/test1/*, /test2/*/after, /test3/*/before/*/after',
+        ).save()
+
+        # These paths match and should NOT redirect.
+        request = self.build_request(url_path='/test1/')
+        response = self.splash_middleware.process_request(request)
+        self.assertEquals(response, None)
+        request = self.build_request(url_path='/test1/something')
+        response = self.splash_middleware.process_request(request)
+        self.assertEquals(response, None)
+        request = self.build_request(url_path='/test1/something/else')
+        response = self.splash_middleware.process_request(request)
+        self.assertEquals(response, None)
+        request = self.build_request(url_path='/test2/something/after')
+        response = self.splash_middleware.process_request(request)
+        self.assertEquals(response, None)
+        request = self.build_request(url_path='/test3/something/before/something/else/after')
+        response = self.splash_middleware.process_request(request)
+        self.assertEquals(response, None)
+
+        # These paths don't match and should redirect.
+        request = self.build_request(url_path='/test2/')
+        response = self.splash_middleware.process_request(request)
+        self.assert_redirect(response, 'http://edx.org')
+        request = self.build_request(url_path='/test2/after')
+        response = self.splash_middleware.process_request(request)
+        self.assert_redirect(response, 'http://edx.org')
+        request = self.build_request(url_path='/test3/before/after')
+        response = self.splash_middleware.process_request(request)
+        self.assert_redirect(response, 'http://edx.org')
+        request = self.build_request(url_path='/test3/something/before/something/after/more')
+        response = self.splash_middleware.process_request(request)
+        self.assert_redirect(response, 'http://edx.org')

@@ -2,6 +2,7 @@
 Splash screen - Middleware
 """
 import logging
+import re
 
 from django.shortcuts import redirect
 
@@ -28,8 +29,10 @@ class SplashMiddleware(object):
             return
 
         # Some URLs should never be redirected
-        if request.path_info in config.unaffected_url_paths_list:
-            return
+        path_info = request.path_info
+        for unaffected_path in config.unaffected_url_paths_list:
+            if self.path_matches(path_info, unaffected_path):
+                return
 
         # Some users should never be redirected
         if request.user.username in config.unaffected_usernames_list:
@@ -39,3 +42,21 @@ class SplashMiddleware(object):
         if (cookie_value not in config.cookie_allowed_values_list and
                 request.build_absolute_uri() != config.redirect_url):
             return redirect(config.redirect_url)
+
+    def path_matches(self, path, pattern):
+        """
+        Determine whether `path` matches the `pattern`.
+
+        `pattern` may include wildcards (*) which represent a sequence of
+        zero or more arbitrary characters.
+        """
+        matches = False
+
+        if path == pattern:
+            matches = True
+        elif '*' in pattern:
+            pattern = re.escape(pattern).replace('\\*', '.*')
+            if re.match(pattern + '$', path):
+                matches = True
+
+        return matches
