@@ -26,7 +26,8 @@ class SplashConfig(ConfigurationModel):
     unaffected_url_paths = models.TextField(
         default='',
         blank=True,
-        help_text="Comma-separated list of URL paths (not including the hostname) which should not be redirected"
+        help_text="Comma-separated list of URL paths (not including the hostname) which should not be redirected. "
+                  "Paths may include wildcards denoted by * (example: /*/student_view)"
     )
     redirect_url = models.URLField(
         default='http://edx.org',
