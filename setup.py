@@ -10,7 +10,7 @@ from setuptools import setup
 
 setup(
     name='django-splash',
-    version='0.1',
+    version='0.2',
     description='Splash screen middleware for Django apps',
     packages=['splash'],
 )
