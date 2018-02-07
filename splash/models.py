@@ -1,6 +1,7 @@
 """
 Models for the splash screen application
 """
+
 from django.db import models
 
 from config_models.models import ConfigurationModel
@@ -43,7 +44,7 @@ class SplashConfig(ConfigurationModel):
             return []
 
         return [val.strip() for val in self.cookie_allowed_values.split(',')]  # pylint: disable=no-member
-    
+
     @property
     def unaffected_usernames_list(self):
         """
@@ -64,7 +65,7 @@ class SplashConfig(ConfigurationModel):
 
         return [url.strip() for url in self.unaffected_url_paths.split(',')]  # pylint: disable=no-member
 
-    def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):  # pylint: disable=arguments-differ
         """Call `full_clean` before saving to ensure proper validation of configuration values"""
         self.full_clean()
         super(SplashConfig, self).save(*args, **kwargs)

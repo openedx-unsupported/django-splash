@@ -2,6 +2,8 @@
 Splash - Tests
 """
 
+import logging
+
 from django.contrib.auth.models import AnonymousUser, User
 from django.core.exceptions import ValidationError
 from django.test import TestCase
@@ -10,8 +12,8 @@ from django.test.client import RequestFactory
 from splash.middleware import SplashMiddleware
 from splash.models import SplashConfig
 
-import logging
 log = logging.getLogger(__name__)
+
 
 class SplashMiddlewareTestCase(TestCase):
     """
@@ -47,9 +49,9 @@ class SplashMiddlewareTestCase(TestCase):
         Check that the response redirects to `redirect_url`, without requiring client
         interface on the response object
         """
-        self.assertTrue(response)
-        self.assertEquals(response.status_code, 302)
-        self.assertEquals(response['Location'], redirect_url)
+        assert response
+        assert response.status_code == 302
+        assert response['Location'] == redirect_url
 
     def test_feature_disabled(self):
         """
@@ -57,7 +59,7 @@ class SplashMiddlewareTestCase(TestCase):
         """
         request = self.build_request()
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
 
     def test_no_cookie(self):
         """
@@ -97,7 +99,7 @@ class SplashMiddlewareTestCase(TestCase):
 
         request = self.build_request(cookies={'edx_splash_screen': 'ok2'})
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
 
     def test_wrong_cookie_different_cookie_name(self):
         """
@@ -125,7 +127,7 @@ class SplashMiddlewareTestCase(TestCase):
 
         request = self.build_request(cookies={'othername': 'seen'})
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
 
     def test_not_unaffected_user(self):
         """
@@ -151,7 +153,7 @@ class SplashMiddlewareTestCase(TestCase):
 
         request = self.build_request(username='user1')
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
 
     def test_redirect_to_current_url(self):
         """
@@ -165,7 +167,7 @@ class SplashMiddlewareTestCase(TestCase):
 
         request = self.build_request()
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
 
     def test_set_non_absolute_url(self):
         """
@@ -187,7 +189,7 @@ class SplashMiddlewareTestCase(TestCase):
 
         request = self.build_request(url_path='/my/url/')
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
 
     def test_unaffected_wildcard_path(self):
         """
@@ -201,19 +203,19 @@ class SplashMiddlewareTestCase(TestCase):
         # These paths match and should NOT redirect.
         request = self.build_request(url_path='/test1/')
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
         request = self.build_request(url_path='/test1/something')
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
         request = self.build_request(url_path='/test1/something/else')
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
         request = self.build_request(url_path='/test2/something/after')
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
         request = self.build_request(url_path='/test3/something/before/something/else/after')
         response = self.splash_middleware.process_request(request)
-        self.assertEquals(response, None)
+        assert response is None
 
         # These paths don't match and should redirect.
         request = self.build_request(url_path='/test2/')
