@@ -6,7 +6,7 @@ import re
 
 from django.shortcuts import redirect
 
-from models import SplashConfig
+from .models import SplashConfig
 
 log = logging.getLogger(__name__)
 
