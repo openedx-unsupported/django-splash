@@ -24,6 +24,7 @@ class SplashMiddlewareTestCase(TestCase):
         """
         Init
         """
+        super(SplashMiddlewareTestCase, self).setUp()
         self.splash_middleware = SplashMiddleware()
         self.request_factory = RequestFactory(SERVER_NAME='example.org')
         SplashConfig().save()
