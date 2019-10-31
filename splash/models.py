@@ -12,27 +12,27 @@ class SplashConfig(ConfigurationModel):
     Configuration for the splash django app
     """
     cookie_name = models.TextField(
-        default='edx_splash_screen',
-        help_text="The name of the cookie to check when assessing if the user needs to be redirected"
+        default=u'edx_splash_screen',
+        help_text=u"The name of the cookie to check when assessing if the user needs to be redirected"
     )
     cookie_allowed_values = models.TextField(
-        default='seen',
-        help_text="Comma-separated list of values accepted as cookie values to prevent the redirect"
+        default=u'seen',
+        help_text=u"Comma-separated list of values accepted as cookie values to prevent the redirect"
     )
     unaffected_usernames = models.TextField(
-        default='',
+        default=u'',
         blank=True,
-        help_text="Comma-separated list of users which should never be redirected (usernames)"
+        help_text=u"Comma-separated list of users which should never be redirected (usernames)"
     )
     unaffected_url_paths = models.TextField(
-        default='',
+        default=u'',
         blank=True,
-        help_text="Comma-separated list of URL paths (not including the hostname) which should not be redirected. "
-                  "Paths may include wildcards denoted by * (example: /*/student_view)"
+        help_text=u"Comma-separated list of URL paths (not including the hostname) which should not be redirected. "
+                  u"Paths may include wildcards denoted by * (example: /*/student_view)"
     )
     redirect_url = models.URLField(
-        default='http://edx.org',
-        help_text="The URL the users should be redirected to when they don't have the right cookie"
+        default=u'http://edx.org',
+        help_text=u"The URL the users should be redirected to when they don't have the right cookie"
     )
 
     @property
