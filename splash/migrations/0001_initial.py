@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('cookie_allowed_values', models.TextField(default=u'seen', help_text=u'Comma-separated list of values accepted as cookie values to prevent the redirect')),
                 ('unaffected_usernames', models.TextField(default=u'', help_text=u'Comma-separated list of users which should never be redirected (usernames)', blank=True)),
                 ('unaffected_url_paths', models.TextField(default=u'', help_text=u'Comma-separated list of URL paths (not including the hostname) which should not be redirected. Paths may include wildcards denoted by * (example: /*/student_view)', blank=True)),
-                ('redirect_url', models.URLField(default=u'http://edx.org', help_text=b"The URL the users should be redirected to when they don't have the right cookie")),
+                ('redirect_url', models.URLField(default=u'http://edx.org', help_text=u"The URL the users should be redirected to when they don't have the right cookie")),
                 ('changed_by', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, editable=False, to=settings.AUTH_USER_MODEL, null=True, verbose_name='Changed by')),
             ],
             options={
