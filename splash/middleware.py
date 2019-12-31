@@ -5,13 +5,14 @@ import logging
 import re
 
 from django.shortcuts import redirect
+from django.utils.deprecation import MiddlewareMixin
 
 from .models import SplashConfig
 
 log = logging.getLogger(__name__)
 
 
-class SplashMiddleware(object):
+class SplashMiddleware(MiddlewareMixin):
     """
     Checks incoming requests, to redirect users to a configured splash screen URL
     if they don't have the proper cookie set
