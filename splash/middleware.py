@@ -62,3 +62,13 @@ class SplashMiddleware(MiddlewareMixin):
                 matches = True
 
         return matches
+
+
+    def __call__(self, request):
+        """
+        This adds compatibility for django 2.2
+        for more details check
+        https://docs.djangoproject.com/en/2.0/topics/http/middleware/#upgrading-middleware
+        """
+        response = self.process_request(request)
+        return response
