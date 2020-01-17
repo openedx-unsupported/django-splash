@@ -40,30 +40,30 @@ class SplashConfig(ConfigurationModel):
         """
         `cookie_allowed_values` as a list of string values
         """
-        if not self.cookie_allowed_values.strip():  # pylint: disable=no-member
+        if not self.cookie_allowed_values.strip():
             return []
 
-        return [val.strip() for val in self.cookie_allowed_values.split(',')]  # pylint: disable=no-member
+        return [val.strip() for val in self.cookie_allowed_values.split(',')]
 
     @property
     def unaffected_usernames_list(self):
         """
         `unaffected_usernames` as a list of username values
         """
-        if not self.unaffected_usernames.strip():  # pylint: disable=no-member
+        if not self.unaffected_usernames.strip():
             return []
 
-        return [name.strip() for name in self.unaffected_usernames.split(',')]  # pylint: disable=no-member
+        return [name.strip() for name in self.unaffected_usernames.split(',')]
 
     @property
     def unaffected_url_paths_list(self):
         """
         `unaffected_url_paths` as a list of URL paths values
         """
-        if not self.unaffected_url_paths.strip():  # pylint: disable=no-member
+        if not self.unaffected_url_paths.strip():
             return []
 
-        return [url.strip() for url in self.unaffected_url_paths.split(',')]  # pylint: disable=no-member
+        return [url.strip() for url in self.unaffected_url_paths.split(',')]
 
     def save(self, *args, **kwargs):  # pylint: disable=arguments-differ
         """Call `full_clean` before saving to ensure proper validation of configuration values"""

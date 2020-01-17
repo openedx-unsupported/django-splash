@@ -31,8 +31,13 @@ DATABASES = {
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.redirects',
+    'django.contrib.sites',
     'splash',
 ]
+
+
 
 ALLOWED_HOSTS = [
     'example.org',
@@ -41,3 +46,11 @@ ALLOWED_HOSTS = [
 ROOT_URLCONF = 'test_urls'
 
 SECRET_KEY = 'insecure-secret-key'
+
+
+MIDDLEWARE = (
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'splash.middleware.SplashMiddleware',
+)

@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Test URLs, we don't use any.
-"""
-from __future__ import absolute_import, unicode_literals
+""" ROOT_URLCONF for tests """
+from django.conf.urls import url
+
+from test_utils import views
+
 
 urlpatterns = [
+    url(r'^home', views.home, name='home'),
 ]
