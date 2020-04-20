@@ -1,20 +1,14 @@
 language: python
 python:
 - 3.5
-- 3.6
+- 3.8
 env:
-- TOXENV=django111
-- TOXENV=django20
-- TOXENV=django21
 - TOXENV=django22
-matrix:
-  include:
-  - python: 3.6
-    env: TOXENV=quality
+- TOXENV=quality
 cache:
 - pip
 before_install:
-- pip install --upgrade pip
+- pip install pip==20.0.2
 install:
 - pip install -r requirements/travis.txt
 script:
