@@ -1,13 +1,7 @@
 """
 Tests for views which will trigger the middleware automatically.
 """
-
-try:
-    from http import cookies
-except:  # pylint: disable=bare-except
-    # python2 import
-    import Cookie as cookies
-
+from http import cookies
 
 from django.contrib.auth.models import User
 from django.test.testcases import TestCase
