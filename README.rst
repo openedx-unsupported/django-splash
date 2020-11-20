@@ -91,8 +91,8 @@ refer to this `list of resources`_ if you need any assistance.
     :target: https://pypi.python.org/pypi/django-splash/
     :alt: PyPI
 
-.. |travis-badge| image:: https://travis-ci.org/edx/django-splash.svg?branch=master
-    :target: https://travis-ci.org/edx/django-splash
+.. |travis-badge| image:: https://travis-ci.com/edx/django-splash.svg?branch=master
+    :target: https://travis-ci.com/edx/django-splash
     :alt: Travis
 
 .. |codecov-badge| image:: http://codecov.io/github/edx/django-splash/coverage.svg?branch=master
