@@ -1,7 +1,7 @@
 django-splash
 =============
 
-|pypi-badge| |travis-badge| |codecov-badge| |pyversions-badge|
+|pypi-badge| |ci-badge| |codecov-badge| |pyversions-badge|
 |license-badge|
 
 Splash screen middleware for Django apps
@@ -91,9 +91,9 @@ refer to this `list of resources`_ if you need any assistance.
     :target: https://pypi.python.org/pypi/django-splash/
     :alt: PyPI
 
-.. |travis-badge| image:: https://travis-ci.org/edx/django-splash.svg?branch=master
-    :target: https://travis-ci.org/edx/django-splash
-    :alt: Travis
+.. |ci-badge| image:: https://github.com/edx/django-splash/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/edx/django-splash/actions?query=workflow%3A%22Python+CI%22
+    :alt: CI
 
 .. |codecov-badge| image:: http://codecov.io/github/edx/django-splash/coverage.svg?branch=master
     :target: http://codecov.io/github/edx/django-splash?branch=master
