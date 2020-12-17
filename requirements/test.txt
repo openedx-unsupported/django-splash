@@ -4,26 +4,29 @@
 #
 #    pip-compile --output-file=requirements/test.txt requirements/base.in requirements/test.in
 #
-attrs==19.3.0             # via pytest
-coverage==5.0.4           # via pytest-cov
-django-config-models==2.0.0  # via -r requirements/base.in
-django-waffle==0.20.0     # via edx-django-utils
-djangorestframework==3.11.0  # via django-config-models
-edx-django-utils==3.1     # via django-config-models
-importlib-metadata==1.6.0  # via pluggy, pytest
-more-itertools==8.2.0     # via pytest
-newrelic==5.10.0.138      # via edx-django-utils
-packaging==20.3           # via pytest
+attrs==20.3.0             # via pytest
+coverage==5.3             # via pytest-cov
+django-config-models==2.0.3  # via -r requirements/base.in
+django-crum==0.7.9        # via edx-django-utils
+django-waffle==2.0.0      # via edx-django-utils
+djangorestframework==3.12.2  # via django-config-models
+edx-django-utils==3.13.0  # via django-config-models
+importlib-metadata==2.1.0  # via pluggy, pytest
+iniconfig==1.1.1          # via pytest
+newrelic==5.22.1.152      # via edx-django-utils
+packaging==20.7           # via pytest
 pathlib2==2.3.5           # via pytest
+pbr==5.5.1                # via stevedore
 pluggy==0.13.1            # via pytest
-psutil==1.2.1             # via edx-django-utils
-py==1.8.1                 # via pytest
-pyparsing==2.4.6          # via packaging
-pytest-cov==2.8.1         # via -r requirements/test.in
-pytest-django==3.9.0      # via -r requirements/test.in
-pytest==5.4.1             # via pytest-cov, pytest-django
-pytz==2019.3              # via django
-six==1.14.0               # via django-waffle, packaging, pathlib2
-sqlparse==0.3.1           # via django
-wcwidth==0.1.9            # via pytest
+psutil==5.7.3             # via edx-django-utils
+py==1.9.0                 # via pytest
+pyparsing==2.4.7          # via packaging
+pytest-cov==2.10.1        # via -r requirements/test.in
+pytest-django==4.1.0      # via -r requirements/test.in
+pytest==6.1.2             # via pytest-cov, pytest-django
+pytz==2020.4              # via django
+six==1.15.0               # via pathlib2, stevedore
+sqlparse==0.4.1           # via django
+stevedore==1.32.0         # via edx-django-utils
+toml==0.10.2              # via pytest
 zipp==1.2.0               # via importlib-metadata
