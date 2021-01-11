@@ -17,7 +17,7 @@ class ViewsTestCase(TestCase):
     Test a views.
     """
     def setUp(self):
-        super(ViewsTestCase, self).setUp()
+        super().setUp()
         self.home_url = reverse('home')
 
     def test_no_cookie(self):

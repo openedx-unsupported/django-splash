@@ -67,4 +67,4 @@ class SplashConfig(ConfigurationModel):
     def save(self, *args, **kwargs):  # pylint: disable=arguments-differ
         """Call `full_clean` before saving to ensure proper validation of configuration values"""
         self.full_clean()
-        super(SplashConfig, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
