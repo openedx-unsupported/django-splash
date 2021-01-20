@@ -3,13 +3,14 @@ Tests for views which will trigger the middleware automatically.
 """
 from http import cookies
 
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.test.testcases import TestCase
 from django.urls import reverse
 
 from splash.models import SplashConfig
 
 PASSWORD = '1234'
+User = get_user_model()
 
 
 class ViewsTestCase(TestCase):
@@ -122,7 +123,7 @@ class ViewsTestCase(TestCase):
         # Above save method url triggers the validation error http://testserver/home
         # update this url to match the testserver url.
 
-        SplashConfig.objects.filter(id=1).update(redirect_url='http://testserver/home')  # pylint: disable=no-member
+        SplashConfig.objects.filter(id=1).update(redirect_url='http://testserver/home')
         self.assert_no_redirect()
 
     def test_affected_path(self):

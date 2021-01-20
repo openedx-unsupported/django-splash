@@ -4,7 +4,8 @@ Splash - Tests
 
 import logging
 
-from django.contrib.auth.models import AnonymousUser, User
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import AnonymousUser
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 from django.test.client import RequestFactory
@@ -13,6 +14,7 @@ from splash.middleware import SplashMiddleware
 from splash.models import SplashConfig
 
 log = logging.getLogger(__name__)
+User = get_user_model()
 
 
 class SplashMiddlewareTestCase(TestCase):
