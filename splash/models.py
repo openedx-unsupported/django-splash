@@ -64,7 +64,7 @@ class SplashConfig(ConfigurationModel):
 
         return [url.strip() for url in self.unaffected_url_paths.split(',')]
 
-    def save(self, *args, **kwargs):  # pylint: disable=arguments-differ
+    def save(self, *args, **kwargs):  # pylint: disable=signature-differs
         """Call `full_clean` before saving to ensure proper validation of configuration values"""
         self.full_clean()
-        super(SplashConfig, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
