@@ -9,6 +9,5 @@
 # linking to it here is good.
 
 
-
-# These packages are backports which can only be installed on Python 2.7
-futures ; python_version == "2.7"
+# Common constraints for edx repos
+-c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
