@@ -44,7 +44,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        "Django<3.0"
+        "Django<4.0"
     ],
     license="Apache Software License 2.0",
     zip_safe=False,
@@ -53,6 +53,7 @@ setup(
         'Development Status :: 3 - Alpha',
         'Framework :: Django',
         'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
