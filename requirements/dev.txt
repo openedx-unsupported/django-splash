@@ -55,17 +55,17 @@ django==3.2.10
     #   djangorestframework
     #   edx-django-utils
     #   edx-i18n-tools
-django-config-models==2.2.0
+django-config-models==2.2.2
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
 django-waffle==2.2.1
     # via edx-django-utils
-djangorestframework==3.13.0
+djangorestframework==3.13.1
     # via django-config-models
 docutils==0.18.1
     # via readme-renderer
-edx-django-utils==4.4.0
+edx-django-utils==4.4.1
     # via django-config-models
 edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
@@ -79,7 +79,7 @@ filelock==3.4.0
     #   virtualenv
 idna==3.3
     # via requests
-importlib-metadata==4.8.2
+importlib-metadata==4.10.0
     # via
     #   keyring
     #   twine
@@ -97,7 +97,7 @@ jinja2==3.0.3
     #   diff-cover
 keyring==23.4.0
     # via twine
-lazy-object-proxy==1.7.0
+lazy-object-proxy==1.7.1
     # via astroid
 markupsafe==2.0.1
     # via jinja2
@@ -225,7 +225,7 @@ virtualenv==20.10.0
     # via tox
 webencodings==0.5.1
     # via bleach
-wheel==0.37.0
+wheel==0.37.1
     # via
     #   -r requirements/dev.in
     #   pip-tools
