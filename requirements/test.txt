@@ -18,15 +18,15 @@ coverage[toml]==6.2
     #   django-crum
     #   djangorestframework
     #   edx-django-utils
-django-config-models==2.2.0
+django-config-models==2.2.2
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
 django-waffle==2.2.1
     # via edx-django-utils
-djangorestframework==3.13.0
+djangorestframework==3.13.1
     # via django-config-models
-edx-django-utils==4.4.0
+edx-django-utils==4.4.1
     # via django-config-models
 iniconfig==1.1.1
     # via pytest
