@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in
 #
-asgiref==3.4.1
+asgiref==3.5.0
     # via django
 astroid==2.9.3
     # via
@@ -53,7 +53,7 @@ django==3.2.11
     #   djangorestframework
     #   edx-django-utils
     #   edx-i18n-tools
-django-config-models==2.2.2
+django-config-models==2.3.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
@@ -63,7 +63,7 @@ djangorestframework==3.13.1
     # via django-config-models
 docutils==0.18.1
     # via readme-renderer
-edx-django-utils==4.4.1
+edx-django-utils==4.4.2
     # via django-config-models
 edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
@@ -101,7 +101,7 @@ markupsafe==2.0.1
     # via jinja2
 mccabe==0.6.1
     # via pylint
-newrelic==7.2.4.171
+newrelic==7.4.0.172
     # via edx-django-utils
 packaging==21.3
     # via
@@ -156,7 +156,7 @@ pylint-plugin-utils==0.7
     # via
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via packaging
 python-slugify==5.0.2
     # via code-annotations

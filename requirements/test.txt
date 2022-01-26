@@ -4,13 +4,13 @@
 #
 #    pip-compile --output-file=requirements/test.txt requirements/base.in requirements/test.in
 #
-asgiref==3.4.1
+asgiref==3.5.0
     # via django
 attrs==21.4.0
     # via pytest
 backports.zoneinfo==0.2.1
     # via django
-coverage[toml]==6.2
+coverage[toml]==6.3
     # via pytest-cov
     # via
     #   -r requirements/base.in
@@ -18,7 +18,7 @@ coverage[toml]==6.2
     #   django-crum
     #   djangorestframework
     #   edx-django-utils
-django-config-models==2.2.2
+django-config-models==2.3.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
@@ -26,11 +26,11 @@ django-waffle==2.3.0
     # via edx-django-utils
 djangorestframework==3.13.1
     # via django-config-models
-edx-django-utils==4.4.1
+edx-django-utils==4.4.2
     # via django-config-models
 iniconfig==1.1.1
     # via pytest
-newrelic==7.2.4.171
+newrelic==7.4.0.172
     # via edx-django-utils
 packaging==21.3
     # via pytest
@@ -42,7 +42,7 @@ psutil==5.9.0
     # via edx-django-utils
 py==1.11.0
     # via pytest
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via packaging
 pytest==6.2.5
     # via
