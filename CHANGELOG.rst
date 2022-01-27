@@ -20,7 +20,7 @@ Unreleased
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Removed
-_____
+_______
 
 * Removed Support for Django22, 30, 31
 
