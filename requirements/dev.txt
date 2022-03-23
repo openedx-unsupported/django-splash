@@ -63,7 +63,7 @@ djangorestframework==3.13.1
     # via django-config-models
 docutils==0.18.1
     # via readme-renderer
-edx-django-utils==4.5.0
+edx-django-utils==4.6.0
     # via django-config-models
 edx-i18n-tools==0.9.1
     # via -r requirements/dev.in
@@ -160,7 +160,7 @@ pyparsing==3.0.7
     # via packaging
 python-slugify==6.1.1
     # via code-annotations
-pytz==2021.3
+pytz==2022.1
     # via
     #   django
     #   djangorestframework
@@ -217,11 +217,11 @@ typing-extensions==4.1.1
     # via
     #   astroid
     #   pylint
-urllib3==1.26.8
+urllib3==1.26.9
     # via
     #   requests
     #   twine
-virtualenv==20.13.3
+virtualenv==20.13.4
     # via tox
 webencodings==0.5.1
     # via bleach
