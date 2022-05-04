@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements/test.txt requirements/base.in requirements/test.in
 #
-asgiref==3.5.0
+asgiref==3.5.1
     # via django
 attrs==21.4.0
     # via pytest
