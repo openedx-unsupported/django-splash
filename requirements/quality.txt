@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements/quality.txt requirements/quality.in
 #
-astroid==2.11.4
+astroid==2.11.5
     # via
     #   pylint
     #   pylint-celery
@@ -47,7 +47,7 @@ mccabe==0.7.0
     # via pylint
 packaging==21.3
     # via caniusepython3
-pbr==5.8.1
+pbr==5.9.0
     # via stevedore
 platformdirs==2.5.2
     # via pylint
@@ -69,7 +69,7 @@ pylint-plugin-utils==0.7
     # via
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.8
+pyparsing==3.0.9
     # via packaging
 python-slugify==6.1.2
     # via code-annotations
