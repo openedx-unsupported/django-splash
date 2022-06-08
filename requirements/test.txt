@@ -14,7 +14,7 @@ cffi==1.15.0
     # via pynacl
 click==8.1.3
     # via edx-django-utils
-coverage[toml]==6.4
+coverage[toml]==6.4.1
     # via pytest-cov
     # via
     #   -r requirements/base.in
@@ -26,7 +26,7 @@ django-config-models==2.3.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
-django-waffle==2.4.1
+django-waffle==2.5.0
     # via edx-django-utils
 djangorestframework==3.13.1
     # via django-config-models
