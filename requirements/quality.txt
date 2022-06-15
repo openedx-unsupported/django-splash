@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements/quality.txt requirements/quality.in
 #
-astroid==2.11.5
+astroid==2.11.6
     # via
     #   pylint
     #   pylint-celery
@@ -29,7 +29,7 @@ dill==0.3.5.1
     # via pylint
 distlib==0.3.4
     # via caniusepython3
-edx-lint==5.2.2
+edx-lint==5.2.4
     # via -r requirements/quality.in
 idna==3.3
     # via requests
@@ -75,7 +75,7 @@ python-slugify==6.1.2
     # via code-annotations
 pyyaml==6.0
     # via code-annotations
-requests==2.27.1
+requests==2.28.0
     # via caniusepython3
 six==1.16.0
     # via edx-lint
