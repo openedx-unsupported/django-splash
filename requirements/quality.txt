@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=requirements/quality.txt requirements/quality.in
 #
-astroid==2.11.5
+astroid==2.11.6
     # via
     #   pylint
     #   pylint-celery
@@ -12,7 +12,7 @@ backports-functools-lru-cache==1.6.4
     # via caniusepython3
 caniusepython3==7.3.0
     # via -r requirements/quality.in
-certifi==2022.5.18.1
+certifi==2022.6.15
     # via requests
 charset-normalizer==2.0.12
     # via requests
@@ -29,7 +29,7 @@ dill==0.3.5.1
     # via pylint
 distlib==0.3.4
     # via caniusepython3
-edx-lint==5.2.2
+edx-lint==5.2.4
     # via -r requirements/quality.in
 idna==3.3
     # via requests
@@ -55,7 +55,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.in
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.14.1
+pylint==2.14.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -75,7 +75,7 @@ python-slugify==6.1.2
     # via code-annotations
 pyyaml==6.0
     # via code-annotations
-requests==2.27.1
+requests==2.28.0
     # via caniusepython3
 six==1.16.0
     # via edx-lint
