@@ -61,7 +61,7 @@ django-config-models==2.3.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
-django-waffle==2.5.0
+django-waffle==2.6.0
     # via edx-django-utils
 djangorestframework==3.13.1
     # via django-config-models
@@ -105,7 +105,7 @@ markupsafe==2.1.1
     # via jinja2
 mccabe==0.7.0
     # via pylint
-newrelic==7.14.0.177
+newrelic==7.16.0.178
     # via edx-django-utils
 packaging==21.3
     # via
@@ -190,7 +190,6 @@ six==1.16.0
     #   bleach
     #   edx-lint
     #   tox
-    #   virtualenv
 snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.4.2
@@ -220,11 +219,11 @@ typing-extensions==4.3.0
     #   astroid
     #   pylint
     #   rich
-urllib3==1.26.10
+urllib3==1.26.11
     # via
     #   requests
     #   twine
-virtualenv==20.15.1
+virtualenv==20.16.1
     # via tox
 webencodings==0.5.1
     # via bleach
