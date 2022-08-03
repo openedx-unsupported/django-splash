@@ -6,7 +6,7 @@
 #
 asgiref==3.5.2
     # via django
-attrs==21.4.0
+attrs==22.1.0
     # via pytest
 backports-zoneinfo==0.2.1
     # via django
