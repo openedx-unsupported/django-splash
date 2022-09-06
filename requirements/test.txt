@@ -26,7 +26,7 @@ django-config-models==2.3.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
-django-waffle==2.7.0
+django-waffle==3.0.0
     # via edx-django-utils
 djangorestframework==3.13.1
     # via django-config-models
