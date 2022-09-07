@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.12.5
+astroid==2.12.8
     # via
     #   pylint
     #   pylint-celery
