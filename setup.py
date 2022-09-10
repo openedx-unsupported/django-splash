@@ -38,7 +38,7 @@ setup(
     long_description=README + '\n\n' + CHANGELOG,
     author='edX',
     author_email='oscm@edx.org',
-    url='https://github.com/edx/django-splash',
+    url='https://github.com/openedx/django-splash',
     packages=[
         'splash',
     ],
