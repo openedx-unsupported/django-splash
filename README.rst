@@ -14,9 +14,9 @@ if they don't have the proper cookie set. This can be used to display a small
 marketing landing page, protect an alpha website from the public eye, make an
 announcement, etc.
 
-Meant to be used with https://github.com/edx/edx-platform/ -- or you will need
+Meant to be used with https://github.com/openedx/edx-platform/ -- or you will need
 to import the config_models application to your Django application:
-https://github.com/edx/django-config-models
+https://github.com/openedx/django-config-models
 
 Installation
 ------------
@@ -68,7 +68,7 @@ How To Contribute
 
 Contributions are very welcome.
 
-Please read `How To Contribute <https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
+Please read `How To Contribute <https://github.com/openedx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
 
 Even though they were written with ``edx-platform`` in mind, the guidelines
 should be followed for Open edX code in general.
@@ -91,8 +91,8 @@ refer to this `list of resources`_ if you need any assistance.
     :target: https://pypi.python.org/pypi/django-splash/
     :alt: PyPI
 
-.. |ci-badge| image:: https://github.com/edx/django-splash/workflows/Python%20CI/badge.svg?branch=master
-    :target: https://github.com/edx/django-splash/actions?query=workflow%3A%22Python+CI%22
+.. |ci-badge| image:: https://github.com/openedx/django-splash/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/openedx/django-splash/actions?query=workflow%3A%22Python+CI%22
     :alt: CI
 
 .. |codecov-badge| image:: http://codecov.io/github/edx/django-splash/coverage.svg?branch=master
@@ -104,5 +104,5 @@ refer to this `list of resources`_ if you need any assistance.
     :alt: Supported Python versions
 
 .. |license-badge| image:: https://img.shields.io/github/license/edx/django-splash.svg
-    :target: https://github.com/edx/django-splash/blob/master/LICENSE.txt
+    :target: https://github.com/openedx/django-splash/blob/master/LICENSE.txt
     :alt: License
