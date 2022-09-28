@@ -16,7 +16,7 @@ bleach==5.0.1
     # via readme-renderer
 caniusepython3==7.3.0
     # via -r requirements/quality.in
-certifi==2022.9.14
+certifi==2022.9.24
     # via requests
 cffi==1.15.1
     # via
@@ -63,7 +63,7 @@ django-crum==0.7.9
     # via edx-django-utils
 django-waffle==3.0.0
     # via edx-django-utils
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via django-config-models
 docutils==0.19
     # via readme-renderer
@@ -89,7 +89,7 @@ isort==5.10.1
     # via
     #   -r requirements/quality.in
     #   pylint
-jaraco-classes==3.2.2
+jaraco-classes==3.2.3
     # via keyring
 jeepney==0.8.0
     # via
@@ -109,13 +109,13 @@ mccabe==0.7.0
     # via pylint
 more-itertools==8.14.0
     # via jaraco-classes
-newrelic==8.1.0.180
+newrelic==8.2.0.181
     # via edx-django-utils
 packaging==21.3
     # via
     #   caniusepython3
     #   tox
-path==16.4.0
+path==16.5.0
     # via edx-i18n-tools
 pbr==5.10.0
     # via stevedore
@@ -174,7 +174,7 @@ pyyaml==6.0
     # via
     #   code-annotations
     #   edx-i18n-tools
-readme-renderer==37.1
+readme-renderer==37.2
     # via twine
 requests==2.28.1
     # via
@@ -196,7 +196,7 @@ six==1.16.0
     #   tox
 snowballstemmer==2.2.0
     # via pydocstyle
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via django
 stevedore==4.0.0
     # via
@@ -208,7 +208,7 @@ tomli==2.0.1
     # via
     #   pylint
     #   tox
-tomlkit==0.11.4
+tomlkit==0.11.5
     # via pylint
 tox==3.26.0
     # via
