@@ -39,7 +39,7 @@ newrelic==8.5.0
     # via edx-django-utils
 packaging==23.0
     # via pytest
-pbr==5.11.0
+pbr==5.11.1
     # via stevedore
 pluggy==1.0.0
     # via pytest
@@ -49,7 +49,7 @@ pycparser==2.21
     # via cffi
 pynacl==1.5.0
     # via edx-django-utils
-pytest==7.2.0
+pytest==7.2.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -57,7 +57,7 @@ pytest-cov==4.0.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
-pytz==2022.7
+pytz==2022.7.1
     # via
     #   django
     #   djangorestframework
