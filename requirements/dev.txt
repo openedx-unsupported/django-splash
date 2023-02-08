@@ -6,7 +6,7 @@
 #
 asgiref==3.6.0
     # via django
-astroid==2.13.5
+astroid==2.14.1
     # via
     #   pylint
     #   pylint-celery
@@ -36,7 +36,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.3.0
     # via edx-lint
-cryptography==39.0.0
+cryptography==39.0.1
     # via secretstorage
 diff-cover==7.4.0
     # via -r requirements/dev.in
@@ -46,7 +46,7 @@ distlib==0.3.6
     # via
     #   caniusepython3
     #   virtualenv
-django==3.2.16
+django==3.2.17
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
@@ -125,7 +125,7 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-platformdirs==2.6.2
+platformdirs==3.0.0
     # via
     #   pylint
     #   virtualenv
@@ -150,7 +150,7 @@ pygments==2.14.0
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.15.10
+pylint==2.16.1
     # via
     #   edx-lint
     #   pylint-celery
@@ -230,7 +230,7 @@ urllib3==1.26.14
     # via
     #   requests
     #   twine
-virtualenv==20.17.1
+virtualenv==20.19.0
     # via tox
 webencodings==0.5.1
     # via bleach
@@ -238,7 +238,7 @@ wheel==0.38.4
     # via -r requirements/dev.in
 wrapt==1.14.1
     # via astroid
-zipp==3.12.0
+zipp==3.12.1
     # via
     #   importlib-metadata
     #   importlib-resources
