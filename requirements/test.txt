@@ -35,7 +35,7 @@ exceptiongroup==1.1.0
     # via pytest
 iniconfig==2.0.0
     # via pytest
-newrelic==8.5.0
+newrelic==8.6.0
     # via edx-django-utils
 packaging==23.0
     # via pytest
@@ -63,7 +63,7 @@ pytz==2022.7.1
     #   djangorestframework
 sqlparse==0.4.3
     # via django
-stevedore==4.1.1
+stevedore==5.0.0
     # via edx-django-utils
 tomli==2.0.1
     # via
