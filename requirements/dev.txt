@@ -83,7 +83,7 @@ importlib-metadata==6.0.0
     # via
     #   keyring
     #   twine
-importlib-resources==5.10.2
+importlib-resources==5.12.0
     # via keyring
 isort==5.12.0
     # via
@@ -113,7 +113,7 @@ mdurl==0.1.2
     # via markdown-it-py
 more-itertools==9.0.0
     # via jaraco-classes
-newrelic==8.6.0
+newrelic==8.7.0
     # via edx-django-utils
 packaging==23.0
     # via
@@ -238,7 +238,7 @@ wheel==0.38.4
     # via -r requirements/dev.in
 wrapt==1.14.1
     # via astroid
-zipp==3.13.0
+zipp==3.14.0
     # via
     #   importlib-metadata
     #   importlib-resources
