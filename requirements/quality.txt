@@ -69,7 +69,7 @@ pylint-plugin-utils==0.7
     # via
     #   pylint-celery
     #   pylint-django
-python-slugify==8.0.0
+python-slugify==8.0.1
     # via code-annotations
 pyyaml==6.0
     # via code-annotations
@@ -93,7 +93,7 @@ typing-extensions==4.5.0
     #   pylint
 urllib3==1.26.14
     # via requests
-wrapt==1.14.1
+wrapt==1.15.0
     # via astroid
 
 # The following packages are considered to be unsafe in a requirements file:
