@@ -65,7 +65,7 @@ djangorestframework==3.14.0
     # via django-config-models
 docutils==0.19
     # via readme-renderer
-edx-django-utils==5.2.0
+edx-django-utils==5.3.0
     # via django-config-models
 edx-i18n-tools==0.9.2
     # via -r requirements/dev.in
@@ -73,13 +73,13 @@ edx-lint==5.3.4
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.in
-filelock==3.9.1
+filelock==3.10.0
     # via
     #   tox
     #   virtualenv
 idna==3.4
     # via requests
-importlib-metadata==6.0.0
+importlib-metadata==6.1.0
     # via
     #   keyring
     #   twine
@@ -113,7 +113,7 @@ mdurl==0.1.2
     # via markdown-it-py
 more-itertools==9.1.0
     # via jaraco-classes
-newrelic==8.7.0
+newrelic==8.7.1
     # via edx-django-utils
 packaging==23.0
     # via
