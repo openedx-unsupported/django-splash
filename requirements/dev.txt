@@ -16,7 +16,7 @@ bleach==6.0.0
     # via readme-renderer
 caniusepython3==7.3.0
     # via -r requirements/quality.in
-certifi==2022.12.7
+certifi==2023.5.7
     # via requests
 cffi==1.15.1
     # via
@@ -46,7 +46,7 @@ distlib==0.3.6
     # via
     #   caniusepython3
     #   virtualenv
-django==3.2.18
+django==3.2.19
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
@@ -63,7 +63,7 @@ django-waffle==3.0.0
     # via edx-django-utils
 djangorestframework==3.14.0
     # via django-config-models
-docutils==0.19
+docutils==0.20
     # via readme-renderer
 edx-django-utils==5.4.0
     # via django-config-models
@@ -150,7 +150,7 @@ pygments==2.15.1
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.17.3
+pylint==2.17.4
     # via
     #   edx-lint
     #   pylint-celery
@@ -178,7 +178,7 @@ pyyaml==6.0
     #   edx-i18n-tools
 readme-renderer==37.3
     # via twine
-requests==2.29.0
+requests==2.30.0
     # via
     #   caniusepython3
     #   requests-toolbelt
@@ -226,7 +226,7 @@ typing-extensions==4.5.0
     #   astroid
     #   pylint
     #   rich
-urllib3==1.26.15
+urllib3==2.0.2
     # via
     #   requests
     #   twine
