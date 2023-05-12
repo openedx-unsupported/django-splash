@@ -3,6 +3,7 @@ Splash - Tests
 """
 
 import logging
+from unittest.mock import Mock
 
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AnonymousUser
@@ -27,7 +28,8 @@ class SplashMiddlewareTestCase(TestCase):
         Init
         """
         super().setUp()
-        self.splash_middleware = SplashMiddleware()
+        self.mock_response = Mock()
+        self.splash_middleware = SplashMiddleware(self.mock_response)
         self.request_factory = RequestFactory(SERVER_NAME='example.org')
         SplashConfig().save()
 
