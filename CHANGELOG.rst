@@ -14,6 +14,8 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+*
+
 * Added Support for Django42.
 
 [1.3.0] - 2023-06-09
