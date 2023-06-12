@@ -1,9 +1,9 @@
 """ ROOT_URLCONF for tests """
-from django.conf.urls import url
+from django.urls import re_path
 
 from test_utils import views
 
 
 urlpatterns = [
-    url(r'^home', views.home, name='home'),
+    re_path(r'^home', views.home, name='home'),
 ]
