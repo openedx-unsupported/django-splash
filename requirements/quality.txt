@@ -49,7 +49,7 @@ packaging==23.1
     # via caniusepython3
 pbr==5.11.1
     # via stevedore
-platformdirs==3.5.1
+platformdirs==3.5.3
     # via pylint
 pycodestyle==2.10.0
     # via -r requirements/quality.in
@@ -91,7 +91,7 @@ typing-extensions==4.6.3
     # via
     #   astroid
     #   pylint
-urllib3==2.0.2
+urllib3==2.0.3
     # via requests
 wrapt==1.15.0
     # via astroid
