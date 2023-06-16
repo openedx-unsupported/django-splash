@@ -14,7 +14,7 @@ coverage==7.2.7
     # via codecov
 distlib==0.3.6
     # via virtualenv
-filelock==3.12.0
+filelock==3.12.2
     # via
     #   tox
     #   virtualenv
@@ -22,7 +22,7 @@ idna==3.4
     # via requests
 packaging==23.1
     # via tox
-platformdirs==3.5.1
+platformdirs==3.5.3
     # via virtualenv
 pluggy==1.0.0
     # via tox
@@ -41,7 +41,7 @@ tox==3.28.0
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.in
-urllib3==2.0.2
+urllib3==2.0.3
     # via requests
 virtualenv==20.23.0
     # via tox
