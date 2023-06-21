@@ -79,7 +79,7 @@ filelock==3.12.2
     #   virtualenv
 idna==3.4
     # via requests
-importlib-metadata==6.6.0
+importlib-metadata==6.7.0
     # via
     #   keyring
     #   twine
@@ -99,7 +99,7 @@ jinja2==3.1.2
     # via
     #   code-annotations
     #   diff-cover
-keyring==23.13.1
+keyring==24.0.0
     # via twine
 lazy-object-proxy==1.9.0
     # via astroid
@@ -125,7 +125,7 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-platformdirs==3.5.3
+platformdirs==3.7.0
     # via
     #   pylint
     #   virtualenv
@@ -176,7 +176,7 @@ pyyaml==6.0
     # via
     #   code-annotations
     #   edx-i18n-tools
-readme-renderer==37.3
+readme-renderer==40.0
     # via twine
 requests==2.31.0
     # via
@@ -231,7 +231,7 @@ urllib3==2.0.3
     # via
     #   requests
     #   twine
-virtualenv==20.23.0
+virtualenv==20.23.1
     # via tox
 webencodings==0.5.1
     # via bleach
