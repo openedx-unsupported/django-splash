@@ -10,7 +10,7 @@ astroid==2.15.5
     # via
     #   pylint
     #   pylint-celery
-backports-functools-lru-cache==1.6.4
+backports-functools-lru-cache==1.6.5
     # via caniusepython3
 bleach==6.0.0
     # via readme-renderer
@@ -99,7 +99,7 @@ jinja2==3.1.2
     # via
     #   code-annotations
     #   diff-cover
-keyring==24.0.0
+keyring==24.2.0
     # via twine
 lazy-object-proxy==1.9.0
     # via astroid
@@ -113,7 +113,7 @@ mdurl==0.1.2
     # via markdown-it-py
 more-itertools==9.1.0
     # via jaraco-classes
-newrelic==8.8.0
+newrelic==8.8.1
     # via edx-django-utils
 packaging==23.1
     # via
@@ -125,11 +125,11 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-platformdirs==3.7.0
+platformdirs==3.8.0
     # via
     #   pylint
     #   virtualenv
-pluggy==1.0.0
+pluggy==1.2.0
     # via
     #   diff-cover
     #   tox

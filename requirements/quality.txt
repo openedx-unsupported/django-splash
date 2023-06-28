@@ -8,7 +8,7 @@ astroid==2.15.5
     # via
     #   pylint
     #   pylint-celery
-backports-functools-lru-cache==1.6.4
+backports-functools-lru-cache==1.6.5
     # via caniusepython3
 caniusepython3==7.3.0
     # via -r requirements/quality.in
@@ -49,7 +49,7 @@ packaging==23.1
     # via caniusepython3
 pbr==5.11.1
     # via stevedore
-platformdirs==3.7.0
+platformdirs==3.8.0
     # via pylint
 pycodestyle==2.10.0
     # via -r requirements/quality.in
