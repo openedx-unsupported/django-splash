@@ -34,7 +34,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.5.0
     # via edx-lint
-cryptography==41.0.3
+cryptography==41.0.4
     # via secretstorage
 diff-cover==7.7.0
     # via -r requirements/dev.in
@@ -66,13 +66,13 @@ docutils==0.20.1
     # via readme-renderer
 edx-django-utils==5.7.0
     # via django-config-models
-edx-i18n-tools==1.1.0
+edx-i18n-tools==1.2.0
     # via -r requirements/dev.in
 edx-lint==5.3.4
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.in
-filelock==3.12.3
+filelock==3.12.4
     # via
     #   tox
     #   virtualenv
@@ -188,7 +188,7 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.5.2
+rich==13.5.3
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -221,11 +221,10 @@ tox-battery==0.6.2
     # via -r requirements/dev.in
 twine==4.0.2
     # via -r requirements/dev.in
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   asgiref
     #   astroid
-    #   filelock
     #   pylint
     #   rich
 urllib3==2.0.4
@@ -238,7 +237,7 @@ wheel==0.41.2
     # via -r requirements/dev.in
 wrapt==1.15.0
     # via astroid
-zipp==3.16.2
+zipp==3.17.0
     # via
     #   importlib-metadata
     #   importlib-resources
