@@ -6,7 +6,7 @@
 #
 asgiref==3.7.2
     # via django
-astroid==2.15.6
+astroid==2.15.8
     # via
     #   pylint
     #   pylint-celery
@@ -16,13 +16,13 @@ caniusepython3==7.3.0
     # via -r requirements/quality.in
 certifi==2023.7.22
     # via requests
-cffi==1.15.1
+cffi==1.16.0
     # via
     #   cryptography
     #   pynacl
 chardet==5.2.0
     # via diff-cover
-charset-normalizer==3.2.0
+charset-normalizer==3.3.0
     # via requests
 click==8.1.7
     # via
@@ -34,7 +34,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.5.0
     # via edx-lint
-cryptography==41.0.3
+cryptography==41.0.4
     # via secretstorage
 diff-cover==7.7.0
     # via -r requirements/dev.in
@@ -54,7 +54,7 @@ django==3.2.21
     #   djangorestframework
     #   edx-django-utils
     #   edx-i18n-tools
-django-config-models==2.5.0
+django-config-models==2.5.1
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
@@ -66,13 +66,13 @@ docutils==0.20.1
     # via readme-renderer
 edx-django-utils==5.7.0
     # via django-config-models
-edx-i18n-tools==1.1.0
+edx-i18n-tools==1.2.0
     # via -r requirements/dev.in
 edx-lint==5.3.4
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.in
-filelock==3.12.3
+filelock==3.12.4
     # via
     #   tox
     #   virtualenv
@@ -82,7 +82,7 @@ importlib-metadata==6.8.0
     # via
     #   keyring
     #   twine
-importlib-resources==6.0.1
+importlib-resources==6.1.0
     # via keyring
 isort==5.12.0
     # via
@@ -112,11 +112,11 @@ mdurl==0.1.2
     # via markdown-it-py
 more-itertools==10.1.0
     # via jaraco-classes
-newrelic==9.0.0
+newrelic==9.1.0
     # via edx-django-utils
 nh3==0.2.14
     # via readme-renderer
-packaging==23.1
+packaging==23.2
     # via
     #   caniusepython3
     #   tox
@@ -126,7 +126,7 @@ pbr==5.11.1
     # via stevedore
 pkginfo==1.9.6
     # via twine
-platformdirs==3.10.0
+platformdirs==3.11.0
     # via
     #   pylint
     #   virtualenv
@@ -151,7 +151,7 @@ pygments==2.16.1
     #   diff-cover
     #   readme-renderer
     #   rich
-pylint==2.17.5
+pylint==2.17.7
     # via
     #   edx-lint
     #   pylint-celery
@@ -188,7 +188,7 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.5.2
+rich==13.6.0
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -221,14 +221,13 @@ tox-battery==0.6.2
     # via -r requirements/dev.in
 twine==4.0.2
     # via -r requirements/dev.in
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   asgiref
     #   astroid
-    #   filelock
     #   pylint
     #   rich
-urllib3==2.0.4
+urllib3==2.0.6
     # via
     #   requests
     #   twine
@@ -238,7 +237,7 @@ wheel==0.41.2
     # via -r requirements/dev.in
 wrapt==1.15.0
     # via astroid
-zipp==3.16.2
+zipp==3.17.0
     # via
     #   importlib-metadata
     #   importlib-resources
