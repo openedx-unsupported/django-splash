@@ -29,7 +29,7 @@ dill==0.3.7
     # via pylint
 distlib==0.3.7
     # via caniusepython3
-edx-lint==5.3.4
+edx-lint==5.3.6
     # via -r requirements/quality.in
 idna==3.4
     # via requests
@@ -61,7 +61,7 @@ pylint==3.0.2
     #   pylint-plugin-utils
 pylint-celery==0.3
     # via edx-lint
-pylint-django==2.5.4
+pylint-django==2.5.5
     # via edx-lint
 pylint-plugin-utils==0.8.2
     # via
