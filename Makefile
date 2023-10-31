@@ -43,14 +43,14 @@ upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade: $(COMMON_CONSTRAINTS_TXT)
 	## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -qr requirements/pip-tools.txt
-	pip-compile --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
-	pip-compile --rebuild -o requirements/pip-tools.txt requirements/pip-tools.in
+	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
+	pip-compile --upgrade --rebuild -o requirements/pip-tools.txt requirements/pip-tools.in
 	pip install -qr requirements/pip.txt
 	pip install -qr requirements/pip-tools.txt
-	pip-compile -o requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in
-	pip-compile -o requirements/quality.txt requirements/quality.in
-	pip-compile -o requirements/test.txt requirements/base.in requirements/test.in
-	pip-compile -o requirements/ci.txt requirements/ci.in
+	pip-compile --upgrade -o requirements/dev.txt requirements/base.in requirements/dev.in requirements/quality.in
+	pip-compile --upgrade -o requirements/quality.txt requirements/quality.in
+	pip-compile --upgrade -o requirements/test.txt requirements/base.in requirements/test.in
+	pip-compile --upgrade -o requirements/ci.txt requirements/ci.in
 	# Let tox control the Django version for tests
 	sed '/^[dD]jango==/d' requirements/test.txt > requirements/test.tmp
 	mv requirements/test.tmp requirements/test.txt
