@@ -12,6 +12,8 @@ astroid==3.0.1
     #   pylint-celery
 backports-functools-lru-cache==1.6.6
     # via caniusepython3
+backports-zoneinfo==0.2.1
+    # via django
 caniusepython3==7.3.0
     # via -r requirements/quality.in
 certifi==2023.7.22
@@ -40,9 +42,8 @@ distlib==0.3.7
     # via
     #   caniusepython3
     #   virtualenv
-django==3.2.22
+django==4.2.6
     # via
-    #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
     #   django-config-models
     #   django-crum
@@ -68,7 +69,7 @@ edx-lint==5.3.6
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.in
-filelock==3.13.0
+filelock==3.13.1
     # via
     #   tox
     #   virtualenv
@@ -162,9 +163,7 @@ pynacl==1.5.0
 python-slugify==8.0.1
     # via code-annotations
 pytz==2023.3.post1
-    # via
-    #   django
-    #   djangorestframework
+    # via djangorestframework
 pyyaml==6.0.1
     # via
     #   code-annotations
