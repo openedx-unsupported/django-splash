@@ -10,12 +10,8 @@ astroid==3.0.1
     # via
     #   pylint
     #   pylint-celery
-backports-functools-lru-cache==1.6.6
-    # via caniusepython3
 cachetools==5.3.2
     # via tox
-caniusepython3==7.3.0
-    # via -r requirements/quality.in
 certifi==2023.7.22
     # via requests
 cffi==1.16.0
@@ -48,7 +44,6 @@ dill==0.3.7
     # via pylint
 distlib==0.3.7
     # via
-    #   caniusepython3
     #   virtualenv
 django==3.2.23
     # via
@@ -124,7 +119,6 @@ nh3==0.2.14
     # via readme-renderer
 packaging==23.2
     # via
-    #   caniusepython3
     #   pyproject-api
     #   tox
 path==16.7.1
@@ -190,7 +184,6 @@ readme-renderer==42.0
     # via twine
 requests==2.31.0
     # via
-    #   caniusepython3
     #   requests-toolbelt
     #   twine
 requests-toolbelt==1.0.0
