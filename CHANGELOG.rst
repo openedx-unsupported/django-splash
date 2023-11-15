@@ -14,7 +14,7 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-*
+* Removed usage of deprecated and unnecessary pylint plugin 'caniusepython3'
 
 [1.3.0] - 2023-06-09
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
