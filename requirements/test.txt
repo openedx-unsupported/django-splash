@@ -30,7 +30,7 @@ django-waffle==4.0.0
     # via edx-django-utils
 djangorestframework==3.14.0
     # via django-config-models
-edx-django-utils==5.8.0
+edx-django-utils==5.9.0
     # via django-config-models
 exceptiongroup==1.2.0
     # via pytest
