@@ -26,17 +26,17 @@ django-config-models==2.5.1
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
-django-waffle==4.0.0
+django-waffle==4.1.0
     # via edx-django-utils
 djangorestframework==3.14.0
     # via django-config-models
-edx-django-utils==5.8.0
+edx-django-utils==5.9.0
     # via django-config-models
 exceptiongroup==1.2.0
     # via pytest
 iniconfig==2.0.0
     # via pytest
-newrelic==9.2.0
+newrelic==9.3.0
     # via edx-django-utils
 packaging==23.2
     # via pytest
@@ -70,5 +70,5 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via asgiref
