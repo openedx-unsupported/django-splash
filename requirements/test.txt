@@ -6,6 +6,8 @@
 #
 asgiref==3.7.2
     # via django
+backports-zoneinfo==0.2.1
+    # via django
 cffi==1.16.0
     # via pynacl
 click==8.1.7
@@ -57,9 +59,7 @@ pytest-cov==4.1.0
 pytest-django==4.8.0
     # via -r requirements/test.in
 pytz==2024.1
-    # via
-    #   django
-    #   djangorestframework
+    # via djangorestframework
 sqlparse==0.4.4
     # via django
 stevedore==5.2.0
