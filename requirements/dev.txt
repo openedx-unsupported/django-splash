@@ -4,12 +4,18 @@
 #
 #    make upgrade
 #
-asgiref==3.7.2
+asgiref==3.8.1
     # via django
 astroid==3.1.0
     # via
     #   pylint
     #   pylint-celery
+backports-tarfile==1.1.0
+    # via jaraco-context
+backports-zoneinfo==0.2.1
+    # via
+    #   django
+    #   djangorestframework
 cachetools==5.3.3
     # via tox
 certifi==2024.2.2
@@ -32,19 +38,19 @@ click==8.1.7
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==1.6.0
+code-annotations==1.8.0
     # via edx-lint
 colorama==0.4.6
     # via tox
 cryptography==42.0.5
     # via secretstorage
-diff-cover==8.0.3
+diff-cover==9.0.0
     # via -r requirements/dev.in
 dill==0.3.8
     # via pylint
 distlib==0.3.8
     # via virtualenv
-django==3.2.24
+django==4.2.11
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
@@ -54,41 +60,46 @@ django==3.2.24
     #   djangorestframework
     #   edx-django-utils
     #   edx-i18n-tools
-django-config-models==2.5.1
+django-config-models==2.7.0
     # via -r requirements/base.in
 django-crum==0.7.9
     # via edx-django-utils
 django-waffle==4.1.0
     # via edx-django-utils
-djangorestframework==3.14.0
+djangorestframework==3.15.1
     # via django-config-models
 docutils==0.20.1
     # via readme-renderer
-edx-django-utils==5.10.1
+edx-django-utils==5.12.0
     # via django-config-models
-edx-i18n-tools==1.3.0
+edx-i18n-tools==1.5.0
     # via -r requirements/dev.in
 edx-lint==5.3.6
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.in
-filelock==3.13.1
+filelock==3.13.4
     # via
     #   tox
     #   virtualenv
-idna==3.6
+idna==3.7
     # via requests
-importlib-metadata==7.0.1
+importlib-metadata==6.11.0
     # via
+    #   -c requirements/common_constraints.txt
     #   keyring
     #   twine
-importlib-resources==6.1.2
+importlib-resources==6.4.0
     # via keyring
 isort==5.13.2
     # via
     #   -r requirements/quality.in
     #   pylint
-jaraco-classes==3.3.1
+jaraco-classes==3.4.0
+    # via keyring
+jaraco-context==5.3.0
+    # via keyring
+jaraco-functools==4.0.0
     # via keyring
 jeepney==0.8.0
     # via
@@ -98,9 +109,9 @@ jinja2==3.1.3
     # via
     #   code-annotations
     #   diff-cover
-keyring==24.3.1
+keyring==25.1.0
     # via twine
-lxml==5.1.0
+lxml==5.2.1
     # via edx-i18n-tools
 markdown-it-py==3.0.0
     # via rich
@@ -111,20 +122,22 @@ mccabe==0.7.0
 mdurl==0.1.2
     # via markdown-it-py
 more-itertools==10.2.0
-    # via jaraco-classes
-newrelic==9.7.0
+    # via
+    #   jaraco-classes
+    #   jaraco-functools
+newrelic==9.8.0
     # via edx-django-utils
-nh3==0.2.15
+nh3==0.2.17
     # via readme-renderer
-packaging==23.2
+packaging==24.0
     # via
     #   pyproject-api
     #   tox
-path==16.10.0
+path==16.14.0
     # via edx-i18n-tools
 pbr==6.0.0
     # via stevedore
-pkginfo==1.9.6
+pkginfo==1.10.0
     # via twine
 platformdirs==4.2.0
     # via
@@ -141,7 +154,7 @@ psutil==5.9.8
     # via edx-django-utils
 pycodestyle==2.11.1
     # via -r requirements/quality.in
-pycparser==2.21
+pycparser==2.22
     # via cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.in
@@ -170,10 +183,6 @@ pyproject-api==1.6.1
     # via tox
 python-slugify==8.0.4
     # via code-annotations
-pytz==2024.1
-    # via
-    #   django
-    #   djangorestframework
 pyyaml==6.0.1
     # via
     #   code-annotations
@@ -188,7 +197,7 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.7.0
+rich==13.7.1
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -196,7 +205,7 @@ six==1.16.0
     # via edx-lint
 snowballstemmer==2.2.0
     # via pydocstyle
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via django
 stevedore==5.2.0
     # via
@@ -211,11 +220,11 @@ tomli==2.0.1
     #   tox
 tomlkit==0.12.4
     # via pylint
-tox==4.13.0
+tox==4.14.2
     # via -r requirements/dev.in
 twine==5.0.0
     # via -r requirements/dev.in
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   asgiref
     #   astroid
@@ -225,11 +234,11 @@ urllib3==2.2.1
     # via
     #   requests
     #   twine
-virtualenv==20.25.1
+virtualenv==20.25.2
     # via tox
-wheel==0.42.0
+wheel==0.43.0
     # via -r requirements/dev.in
-zipp==3.17.0
+zipp==3.18.1
     # via
     #   importlib-metadata
     #   importlib-resources
