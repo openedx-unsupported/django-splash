@@ -4,6 +4,11 @@ django-splash
 |pypi-badge| |ci-badge| |codecov-badge| |pyversions-badge|
 |license-badge|
 
+DEPRECATED
+----------
+
+This project is deprecated and will not be recieving any further updates.  See https://github.com/openedx/public-engineering/issues/224 for more details.
+
 Splash screen middleware for Django apps
 
 Overview
